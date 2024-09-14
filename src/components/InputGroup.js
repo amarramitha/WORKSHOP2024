@@ -7,13 +7,14 @@ export function InputGroup({
   label = "",
   required,
   placeholder = `Enter your ${label.toLowerCase()}`,
+  onChange,
 }) {
   return (
     <div className="mb-4">
       <Label htmlFor={id} required={required}>
         {label}
       </Label>
-      <Input id={id} type={type} placeholder={placeholder} />
+      <Input id={id} onChange={onChange} type={type} placeholder={placeholder} />
     </div>
   );
 }
